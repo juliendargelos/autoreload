@@ -2,7 +2,7 @@
   "name": "@juliendargelos/autoreload",
   "preferGlobal": true,
   "description": "Autoreload server - watches your files for changes and handles client polling.",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "author": "Ian Webster <ian_npm@ianww.com>",
   "contributors": [
     "Julien Dargelos <contact@juliendargelos.com> (https://juliendargelos.com)"

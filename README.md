@@ -13,34 +13,55 @@ Get it with yarn or npm:  `yarn global add autoreload`, `npm install -g autorelo
 
 Directories or files are valid arguments.  For example, to recursively watch 3 directories and a file for changes:
 
-    $ autoreload js css templates/main settings.py
+```shell
+autoreload js css templates/main settings.py
+```
 
 To watch everything in the current directory and below:
 
-    $ autoreload .
+```shell
+autoreload .
+```
 
 ### Add js to your page
 
 Once running, autoreload will print a script tag to include on your page:
 
-     <script src="http://localhost:60000/autoreload.js"></script>
+```html
+<script src="http://localhost:60000/autoreload.js"></script>
+```
 
-And call AutoReload.Watch() to begin watching for changes:
+And call AutoReload.watch() to begin watching for changes:
 
-     <script>
-       AutoReload.watch('localhost:60000');   // or some other host/port, default host: 'localhost:60000'
-     </script>
+```html
+```html
+<script>
+  AutoReload.watch('localhost:60000'); // or some other host/port, default host: 'localhost:60000'
+</script>
+```
+
+Alternatively, you can simply import autoreload from a module or an html file to automatically watch with default host, only if the current hostname is `localhost`:
+
+```javascript
+import './node_modules/autoreload/autoreload.js'
+```
+
+```html
+<script src="node_modules/autoreload/autoreload.js"></script>
+```
 
 ### Details
 
 autoreload options:
 
-      --port, -p     Port server listens on           [default: 60000]
-      --exclude, -e  Regex matching files to exclude  [default: "\\.sw[poaxn]$"]
-      --regex_opts   Exclusion regex options          [default: "im"]
-      --https        Use https                        [default: false]
-      --key          SSL key                          [default: dummy SSL key]
-      --cert         SSL cert                         [default: dummy SSL cert]
+```
+--port, -p     Port server listens on           [default: 60000]
+--exclude, -e  Regex matching files to exclude  [default: "\\.sw[poaxn]$"]
+--regex_opts   Exclusion regex options          [default: "im"]
+--https        Use https                        [default: false]
+--key          SSL key                          [default: dummy SSL key]
+--cert         SSL cert                         [default: dummy SSL cert]
+```
 
 To stop watching for changes, call `AutoReload.stop()`.
 
