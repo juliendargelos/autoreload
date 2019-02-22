@@ -1,9 +1,11 @@
 autoreload
 ==========
 
-This is an easy-to-use command-line "automatic reload" or "live reload" script for developers.  It makes your browser reload when you edit files.  It's based on [connect-autoreload](https://github.com/typpo/connect-autoreload).
+This is a non-jquery-dependent fork of [autoreload](https://github.com/typpo/autoreload).
 
-Get it with npm:  `npm install -g autoreload`
+autoreload is an easy-to-use command-line "automatic reload" or "live reload" script for developers.  It makes your browser reload when you edit files.  It's based on [@juliendargelos/connect-autoreload](https://github.com/juliendargelos/connect-autoreload).
+
+Get it with yarn or npm:  `yarn global add autoreload`, `npm install -g autoreload`
 
 # Usage
 
@@ -26,7 +28,7 @@ Once running, autoreload will print a script tag to include on your page:
 And call AutoReload.Watch() to begin watching for changes:
 
      <script>
-       AutoReload.Watch('localhost:60000');   // or some other host/port
+       AutoReload.watch('localhost:60000');   // or some other host/port, default host: 'localhost:60000'
      </script>
 
 ### Details
@@ -40,7 +42,7 @@ autoreload options:
       --key          SSL key                          [default: dummy SSL key]
       --cert         SSL cert                         [default: dummy SSL cert]
 
-To stop watching for changes, call `AutoReload.Stop()`.
+To stop watching for changes, call `AutoReload.stop()`.
 
 ## SSL
 
@@ -52,10 +54,6 @@ You have three options if your development server requires SSL.
 
    3. Provide your own SSL certificate using `--key` and `--cert`.
 
-## jQuery dependency
-
-autoreload.js assumes jquery is available in our page.  This issue is tracked [here](https://github.com/typpo/autoreload/issues/1).
-
 ## Troubleshooting
 
 If you get `Error: watch ENOSPC`, chances are you need to increase your filesystem watches:
@@ -66,6 +64,7 @@ If you get `Error: watch ENOSPC`, chances are you need to increase your filesyst
 
 ```
 Copyright (c) 2013 Room 77, Ian Webster
+Copyright (c) 2019 Julien Dargelos
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
