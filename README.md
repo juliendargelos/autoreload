@@ -5,7 +5,7 @@ This is a non-jquery-dependent fork of [autoreload](https://github.com/typpo/aut
 
 autoreload is an easy-to-use command-line "automatic reload" or "live reload" script for developers.  It makes your browser reload when you edit files.  It's based on [@juliendargelos/connect-autoreload](https://github.com/juliendargelos/connect-autoreload).
 
-Get it with yarn or npm:  `yarn global add autoreload`, `npm install -g autoreload`
+Get it with yarn or npm:  `yarn global add @juliendargelos/autoreload`, `npm install -g @juliendargelos/autoreload`
 
 # Usage
 
@@ -43,11 +43,11 @@ And call AutoReload.watch() to begin watching for changes:
 Alternatively, you can simply import autoreload from a module or an html file to automatically watch with default host, only if the current hostname is `localhost`:
 
 ```javascript
-import './node_modules/autoreload/autoreload.js'
+import './node_modules/@juliendargelos/autoreload/autoreload.js'
 ```
 
 ```html
-<script src="node_modules/autoreload/autoreload.js"></script>
+<script src="node_modules/@juliendargelos/autoreload/autoreload.js"></script>
 ```
 
 ### Details
