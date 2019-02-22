@@ -1,5 +1,5 @@
 {
-  "name": "autoreload",
+  "name": "@juliendargelos/autoreload",
   "preferGlobal": true,
   "description": "Autoreload server - watches your files for changes and handles client polling.",
   "version": "0.0.7",
@@ -15,7 +15,7 @@
     "process": "~0.5.1",
     "colors": "~0.6.2"
   },
-  "repository": "https://github.com/typpo/autoreload.git",
+  "repository": "https://github.com/juliendargelos/autoreload.git",
   "license" : "MIT",
   "main": "./app.js",
   "bin": "./app.js"
